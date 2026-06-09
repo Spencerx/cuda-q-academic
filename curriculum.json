@@ -196,7 +196,7 @@
   },
   "lessons": {
     "quickstart-01-start-small-with-one-qubit": {
-      "title": "01 Start Small with One Qubit",
+      "title": "Start Small with One Qubit",
       "primary_track_id": "quick-start-to-quantum",
       "track_ids": [
         "quick-start-to-quantum"
@@ -227,7 +227,7 @@
       ]
     },
     "quickstart-02-multiple-qubits-and-entanglement": {
-      "title": "02 Multiple Qubits and Entanglement",
+      "title": "Multiple Qubits and Entanglement",
       "primary_track_id": "quick-start-to-quantum",
       "track_ids": [
         "quick-start-to-quantum"
@@ -258,7 +258,7 @@
       ]
     },
     "quickstart-03-write-your-first-parameterized-kernel": {
-      "title": "03 Write Your First Parameterized Kernel",
+      "title": "Write Your First Parameterized Kernel",
       "primary_track_id": "quick-start-to-quantum",
       "track_ids": [
         "quick-start-to-quantum"
@@ -284,7 +284,7 @@
       "widget_ids": []
     },
     "quickstart-04-build-your-first-variational-algorithm": {
-      "title": "04 Build Your First Variational Algorithm",
+      "title": "Build Your First Variational Algorithm",
       "primary_track_id": "quick-start-to-quantum",
       "track_ids": [
         "quick-start-to-quantum"
@@ -399,10 +399,10 @@
       "track_ids": [
         "qis-foundational-algorithms"
       ],
-      "source_kind": "external_notebook",
-      "repo_path": null,
-      "link": "https://github.com/NVIDIA/cuda-quantum/blob/main/docs/sphinx/applications/python/deutsch_algorithm.ipynb",
-      "colab_url": "https://colab.research.google.com/github/NVIDIA/cuda-quantum/blob/main/docs/sphinx/applications/python/deutsch_algorithm.ipynb",
+      "source_kind": "local_notebook",
+      "repo_path": "qis-examples/deutsch_algorithm.ipynb",
+      "link": "https://github.com/NVIDIA/cuda-q-academic/blob/main/qis-examples/deutsch_algorithm.ipynb",
+      "colab_url": "https://colab.research.google.com/github/NVIDIA/cuda-q-academic/blob/main/qis-examples/deutsch_algorithm.ipynb",
       "difficulty": "intro",
       "prerequisites": [
         "Hadamard gates",
@@ -538,7 +538,7 @@
       "metadata_source": "llms.txt"
     },
     "qec-01-introduction-to-qec": {
-      "title": "01 Introduction to QEC",
+      "title": "Introduction to QEC",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -568,7 +568,7 @@
       ]
     },
     "qec-02-stabilizers-shor-and-steane": {
-      "title": "02 Stabilizers, Shor Code, Steane Code",
+      "title": "Stabilizers, Shor Code, Steane Code",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -595,7 +595,7 @@
       "widget_ids": []
     },
     "qec-03-noisy-simulation": {
-      "title": "03 Noisy Simulation",
+      "title": "Noisy Simulation",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -624,7 +624,7 @@
       ]
     },
     "qec-04-ai-decoders": {
-      "title": "04 AI Decoders",
+      "title": "AI Decoders",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101",
@@ -652,7 +652,7 @@
       "widget_ids": []
     },
     "qec-05-magic-state-distillation": {
-      "title": "05 Magic State Distillation",
+      "title": "Magic State Distillation",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -679,7 +679,7 @@
       "widget_ids": []
     },
     "qec-06-toric-and-surface-codes": {
-      "title": "06 Toric and Surface Codes",
+      "title": "Toric and Surface Codes",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -706,7 +706,7 @@
       "widget_ids": []
     },
     "qec-07-qldpc-codes": {
-      "title": "07 qLDPC Codes",
+      "title": "qLDPC Codes",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -734,7 +734,7 @@
       "widget_ids": []
     },
     "qec-08-decoder-metrics-and-parallel-window-decoding": {
-      "title": "08 Decoder Metrics and Parallel Window Decoding",
+      "title": "Decoder Metrics and Parallel Window Decoding",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -763,7 +763,7 @@
       "widget_ids": []
     },
     "qec-09-detector-error-models-and-real-time-decoding": {
-      "title": "09 Detector Error Models and Real-Time Decoding",
+      "title": "Detector Error Models and Real-Time Decoding",
       "primary_track_id": "qec-101",
       "track_ids": [
         "qec-101"
@@ -914,7 +914,7 @@
       ]
     },
     "quantum-walks-for-finance-part-1": {
-      "title": "01 Quantum Walks for Finance, Part 1",
+      "title": "Quantum Walks for Finance, Part 1",
       "primary_track_id": "applications-to-finance",
       "track_ids": [
         "applications-to-finance",
@@ -944,7 +944,7 @@
       ]
     },
     "quantum-walks-for-finance-part-2": {
-      "title": "02 Quantum Walks for Finance, Part 2",
+      "title": "Quantum Walks for Finance, Part 2",
       "primary_track_id": "applications-to-finance",
       "track_ids": [
         "applications-to-finance"
@@ -970,7 +970,7 @@
       "widget_ids": []
     },
     "portfolio-optimization-three-ways-q-chop": {
-      "title": "03 Portfolio Optimization Three Ways (Q-CHOP)",
+      "title": "Portfolio Optimization Three Ways (Q-CHOP)",
       "primary_track_id": "applications-to-finance",
       "track_ids": [
         "applications-to-finance"
@@ -1000,7 +1000,7 @@
       ]
     },
     "max-cut-with-qaoa": {
-      "title": "01 Max Cut with QAOA",
+      "title": "Max Cut with QAOA",
       "primary_track_id": "qaoa-for-max-cut",
       "track_ids": [
         "qaoa-for-max-cut",
@@ -1027,7 +1027,7 @@
       "widget_ids": []
     },
     "divide-and-conquer-qaoa-one-level": {
-      "title": "02 Divide-and-Conquer QAOA (One Level)",
+      "title": "Divide-and-Conquer QAOA (One Level)",
       "primary_track_id": "qaoa-for-max-cut",
       "track_ids": [
         "qaoa-for-max-cut"
@@ -1053,7 +1053,7 @@
       "widget_ids": []
     },
     "recursive-divide-and-conquer-qaoa": {
-      "title": "03 Recursive Divide-and-Conquer QAOA",
+      "title": "Recursive Divide-and-Conquer QAOA",
       "primary_track_id": "qaoa-for-max-cut",
       "track_ids": [
         "qaoa-for-max-cut"
@@ -1079,7 +1079,7 @@
       "widget_ids": []
     },
     "weighted-max-cut-project": {
-      "title": "04 Weighted Max Cut Project",
+      "title": "Weighted Max Cut Project",
       "primary_track_id": "qaoa-for-max-cut",
       "track_ids": [
         "qaoa-for-max-cut"
@@ -1105,7 +1105,7 @@
       "widget_ids": []
     },
     "compiling-unitaries-with-diffusion-models": {
-      "title": "01 Compiling Unitaries with Diffusion Models",
+      "title": "Compiling Unitaries with Diffusion Models",
       "primary_track_id": "ai-for-quantum",
       "track_ids": [
         "ai-for-quantum"
@@ -1136,7 +1136,7 @@
       ]
     },
     "jaynes-cummings-hamiltonian": {
-      "title": "01 Jaynes-Cummings Hamiltonian",
+      "title": "Jaynes-Cummings Hamiltonian",
       "primary_track_id": "dynamics-101",
       "track_ids": [
         "dynamics-101"
@@ -1163,7 +1163,7 @@
       "widget_ids": []
     },
     "time-dependent-hamiltonians": {
-      "title": "02 Time-Dependent Hamiltonians",
+      "title": "Time-Dependent Hamiltonians",
       "primary_track_id": "dynamics-101",
       "track_ids": [
         "dynamics-101"
@@ -1190,7 +1190,7 @@
       "widget_ids": []
     },
     "labs-optimization": {
-      "title": "01 Quantum-Enhanced Optimization (LABS)",
+      "title": "Quantum-Enhanced Optimization (LABS)",
       "primary_track_id": "hybrid-workflows",
       "track_ids": [
         "hybrid-workflows"
@@ -1220,7 +1220,7 @@
       ]
     },
     "qaoa-max-cut-and-gpt-qaoa-workshop": {
-      "title": "02 QAOA for Max Cut and GPT-QAOA",
+      "title": "QAOA for Max Cut and GPT-QAOA Workshop",
       "primary_track_id": "hybrid-workflows",
       "track_ids": [
         "hybrid-workflows",
@@ -1256,7 +1256,7 @@
       ]
     },
     "calibration-start-here": {
-      "title": "Calibration Track",
+      "title": "Start Here — Calibration Track",
       "primary_track_id": "calibration",
       "track_ids": [
         "calibration"
@@ -1494,7 +1494,7 @@
       "related_track_ids": [
         "ai-for-quantum"
       ],
-      "summary": "Visualizes diffusion, showing how noise is added or removed from data\u2014key in thermodynamics and GenAI.",
+      "summary": "Visualizes diffusion, showing how noise is added or removed from data—key in thermodynamics and GenAI.",
       "keywords": [
         "diffusion models",
         "noise",
@@ -1904,7 +1904,7 @@
       "related_track_ids": [
         "qaoa-for-max-cut"
       ],
-      "summary": "See QAOA working on the simplest interesting graph: a triangle (3 nodes, 3 edges). Play the role of the classical optimizer \u2014 two sliders control the cost angle (\u03b1) and mixer angle (\u03b2) \u2014 and watch quantum interference steer the probability distribution toward the max cut.",
+      "summary": "See QAOA working on the simplest interesting graph: a triangle (3 nodes, 3 edges). Play the role of the classical optimizer — two sliders control the cost angle (α) and mixer angle (β) — and watch quantum interference steer the probability distribution toward the max cut.",
       "keywords": [
         "QAOA",
         "Max Cut",
@@ -1926,7 +1926,7 @@
       "related_track_ids": [
         "qaoa-for-max-cut"
       ],
-      "summary": "Explore the 3-D cost landscape of a 1-layer QAOA circuit, see how tuning parameters helps the optimizer find the optimal Max Cut, and discover why optimization gets harder at scale \u2014 the barren plateau problem.",
+      "summary": "Explore the 3-D cost landscape of a 1-layer QAOA circuit, see how tuning parameters helps the optimizer find the optimal Max Cut, and discover why optimization gets harder at scale — the barren plateau problem.",
       "keywords": [
         "QAOA",
         "optimization landscape",
@@ -1948,7 +1948,7 @@
       "related_track_ids": [
         "qaoa-for-max-cut"
       ],
-      "summary": "One QAOA layer has already been applied to a triangle graph. Now choose which operator to add next. The gradient tells you \u2014 drag the \u03b8 slider to see how each candidate operator changes the cost and which one improves the circuit the most (the core idea behind Adapt-QAOA).",
+      "summary": "One QAOA layer has already been applied to a triangle graph. Now choose which operator to add next. The gradient tells you — drag the θ slider to see how each candidate operator changes the cost and which one improves the circuit the most (the core idea behind Adapt-QAOA).",
       "keywords": [
         "Adapt-QAOA",
         "operator gradients",
@@ -1992,7 +1992,7 @@
       "related_track_ids": [
         "qaoa-for-max-cut"
       ],
-      "summary": "Compare how classical bits and quantum qubits encode 2-colorings of a 7-vertex graph \u2014 one assignment at a time vs. all 128 simultaneously. Toggle bits, measure qubits, and build intuition for superposition and QAOA.",
+      "summary": "Compare how classical bits and quantum qubits encode 2-colorings of a 7-vertex graph — one assignment at a time vs. all 128 simultaneously. Toggle bits, measure qubits, and build intuition for superposition and QAOA.",
       "keywords": [
         "vertex coloring",
         "bits vs qubits",
