@@ -1,12 +1,32 @@
 # Custom Learning Paths with CUDA-Q Academic
 
-Instead of a fixed syllabus, CUDA-Q Academic gives you a flexible tool to supplement your quantum computing course by building a custom learning path and sharing it as a single link in your weekly course plans, syllabus, or LMS — students click and access exactly the modules that fit your curriculum alongside your lectures and textbooks.
+CUDA-Q Academic is NVIDIA's open educational program for quantum computing — hands-on Jupyter notebooks, interactive widgets, and instructor resources you can integrate into undergraduate and graduate courses. This guide explains how to assemble a custom learning path from that content and share it with students as a single link.
 
-**[Open the Learning Path Builder →](https://nvidia.github.io/cuda-q-academic/learningpath.html)**
+---
+
+## Faculty Quick Start
+
+### 🎥 Recorded tour (Demo Day)
+
+Watch the **CUDA-Q Academic Demo Day** recording for a faculty-oriented tour of the program—not a student lecture, but a demo of what's available and how to use it in teaching.
+
+The session covers the quantum GPU supercomputing curriculum vision, live walkthroughs of Learning Paths, the custom pathway builder, interactive widgets, representative notebooks (QAOA, calibration), and the agentic group-project framework, plus practical guidance on modular adoption, Creative Commons remixing, and sharing curated links with students.
+
+| Platform | Recording |
+| :---- | :---- |
+| YouTube | [Watch on YouTube](https://www.youtube.com/watch?v=H7TE0JWJLjE) *(missing the first couple of minutes)* |
+| LinkedIn | [Watch on LinkedIn](https://www.linkedin.com/events/cudalive-cuda-qacademicdemoday7460526223761235968/theater/) |
+| X | [Watch on X](https://x.com/i/broadcasts/1jGXgeVnqbBKZ) |
 
 ---
 
 ## How It Works
+
+### Build your learning path
+
+Instead of a fixed syllabus, CUDA-Q Academic gives you a flexible tool to supplement your quantum computing course by building a custom learning path and sharing it as a single link in your weekly course plans, syllabus, or LMS — students click and access exactly the modules that fit your curriculum alongside your lectures and textbooks.
+
+**[Open the Learning Path Builder →](https://nvidia.github.io/cuda-q-academic/learningpath.html)**
 
 ### 1. Pick your modules
 
