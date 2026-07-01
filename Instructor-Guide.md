@@ -111,7 +111,7 @@ A browser-based circuit designer and emulator. Students drag and drop gates onto
 
 #### Three execution modes
 
-The most pedagogically rich feature. Running the same circuit in each mode and comparing outputs is a cleaner demonstration of the statevector/sampling distinction than any static diagram.
+Running the same circuit in each mode and comparing outputs is a cleaner demonstration of the statevector/sampling distinction than any static diagram.
 
 **[Get State](https://nvidia.github.io/cuda-quantum/latest/api/languages/python_api.html#cudaq.get_state)** returns the full statevector: complex probability amplitudes for every basis state. Shows what the quantum computer is tracking mathematically, before any measurement occurs. *Discussion prompt: "Based on these amplitudes, predict what the Sample histogram will look like. Then switch modes and check."*
 
