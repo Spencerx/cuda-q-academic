@@ -119,7 +119,6 @@ Running the same circuit in each mode and comparing outputs is a cleaner demonst
 
 **[Run](https://nvidia.github.io/cuda-quantum/latest/api/languages/python_api.html#cudaq.run)** is also shot-based, but students specify the measurements explicitly: which qubits to measure and in which basis (Z, X, or Y). The difference from Sample is control: in Run mode, measurement is a deliberate design decision, not an automatic step, and the widget generates the corresponding `mz()`, `mx()`, or `my()` calls in the kernel code. This reflects how CUDA-Q programs are structured — measurements are explicit, named calls that appear in the kernel and map directly to what students will write in the notebooks.
 
-> [!NOTE]
 > **Sample Activity (10 min):** Load the Bell State, step through all three modes, and ask students to record what each returns and explain the relationship between them.
 
 #### Measurement bases
