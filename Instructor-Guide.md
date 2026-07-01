@@ -97,3 +97,57 @@ Select Quick Start notebooks 1–2, the QAOA for Max Cut and GPT-QAOA notebook i
 ---
 
 *For more on how to deploy the project template, see the [Quantum AI Project Template Teaching Guide](./quantum-ai-project-template/Teaching-Guide.md). Questions or feedback: [cuda-quantum-academic@nvidia.com](mailto:cuda-quantum-academic@nvidia.com).*
+
+<details>
+<summary><strong>Using the Interactive Widgets</strong></summary>
+
+The learning path builder lets you add interactive visualization tools directly into any path (Step 3 above). These widgets run in the browser with no installation, no account, and no GPU required — link them from your LMS, syllabus, or assignment descriptions and students can open them immediately.
+
+### Hello World Circuit Visualizer
+
+**[Open Hello World →](https://nvidia.github.io/cuda-q-academic/quick-start-to-quantum/interactive_widget/cudaq-hello-world.html)**
+
+A browser-based circuit designer and emulator. Students drag and drop gates onto 1–5 qubit lines, and the CUDA-Q kernel code updates in real time. Four built-in example circuits (Bell State, GHZ, Bernstein-Vazirani, Teleportation) can be loaded directly. Circuits and their current settings can be shared via a stable URL — useful for collaborative work and instructor review.
+
+#### Three execution modes
+
+The most pedagogically rich feature. Running the same circuit in each mode and comparing outputs is a cleaner demonstration of the statevector/sampling distinction than any static diagram.
+
+**[Get State](https://nvidia.github.io/cuda-quantum/latest/api/languages/python_api.html#cudaq.get_state)** returns the full statevector: complex probability amplitudes for every basis state. Shows what the quantum computer is tracking mathematically, before any measurement occurs. *Discussion prompt: "Based on these amplitudes, predict what the Sample histogram will look like. Then switch modes and check."*
+
+**[Sample](https://nvidia.github.io/cuda-quantum/latest/api/languages/python_api.html#cudaq.sample)** measures all qubits in the Z basis automatically and repeats 1000 times, returning a histogram of outcomes. Switching from Get State to Sample makes Born's rule concrete — students can see that squaring the amplitudes gives the probabilities they observe in the histogram.
+
+**[Run](https://nvidia.github.io/cuda-quantum/latest/api/languages/python_api.html#cudaq.run)** is also shot-based, but students specify the measurements explicitly: which qubits to measure and in which basis (Z, X, or Y). The difference from Sample is control: in Run mode, measurement is a deliberate design decision, not an automatic step, and the widget generates the corresponding `mz()`, `mx()`, or `my()` calls in the kernel code. This reflects how CUDA-Q programs are structured — measurements are explicit, named calls that appear in the kernel and map directly to what students will write in the notebooks.
+
+> [!TIP]
+> **Sample Activity (10 min):** Load the Bell State, step through all three modes, and ask students to record what each returns and explain the relationship between them.
+
+#### Measurement bases
+
+The "Edit Measurements" feature in Run mode lets students choose measurement basis per qubit. The Teleportation example demonstrates why this matters — it measures qubit 2 in the Y basis (`my`), and in Run mode returns `True` 100% of the time, verifying the teleportation succeeded. Switching to Z-basis measurement breaks this, showing that basis choice is a physical decision, not bookkeeping.
+
+*Discussion prompt: "Why does measuring in the X basis give a different result than Z on this circuit?"*
+
+#### Gate matrices and linear algebra
+
+For single-qubit gates, the widget displays the gate's 2×2 unitary matrix. Combined with Get State output, students can trace the full matrix multiplication by hand — apply the H matrix to |0⟩ and verify the result matches the statevector. For parametric gates (RX, RY, RZ), the matrix entries change as students adjust the rotation angle, making the geometry of gate operations visible.
+
+*Discussion prompt: "The H gate has entries of ±1/√2. Where do those values come from, and what does it mean for a matrix to be unitary?"*
+
+#### Code and sharing
+
+The "Copy Code + Viz" button exports the kernel along with visualization code, so students can paste directly into a notebook and run it in a full CUDA-Q environment. Hello World becomes a scaffolded on-ramp rather than a dead end. The "Share Link" button generates a URL encoding the current circuit, mode, and measurements — useful beyond student work too: instructors can build example circuits ahead of time, then share them as links in a slide deck, LMS module, or assignment brief so students arrive at exactly the right starting state. It's also practical for peer debugging and homework submission.
+
+### Other Widgets
+
+The learning path builder includes additional widgets beyond those listed here — browse them in the builder under Step 3. The table below highlights a few, with the module and course moment where each fits best.
+
+| Widget | Best placed before or during | Primary use |
+| :---- | :---- | :---- |
+| [Born's Rule and Sampling](https://nvidia.github.io/cuda-q-academic/quick-start-to-quantum/interactive_widget/borns-rule-widget-sampling.html) | [Quick Start Notebook 1](https://nvidia.github.io/cuda-q-academic/learningpath.html?track=track-quickstart) | Introduce measurement and probability; recommended as the first visualization in any intro course |
+| [Bloch Sphere Visualizer](https://nvidia.github.io/cuda-q-academic/quantum-applications-to-finance/images/bloch_sphere_visualization.html) | [Quick Start Notebooks 1–2](https://nvidia.github.io/cuda-q-academic/learningpath.html?track=track-quickstart) | Build qubit state intuition before multi-qubit circuits are introduced |
+| [QAOA Max Cut Explorer](https://nvidia.github.io/cuda-q-academic/interactive_widgets/triangle-qaoa.html) | [QAOA for Max Cut Notebook 1](https://nvidia.github.io/cuda-q-academic/learningpath.html?track=track-qaoa) | Students control the optimizer angles and watch the output histogram update live — makes the variational loop concrete before the code |
+| [ADAPT-VQE Visualizer](https://nvidia.github.io/cuda-q-academic/chemistry-simulations/Images/adapt_vqe/adapt_widget.html) | [Chemistry Simulations](https://nvidia.github.io/cuda-q-academic/learningpath.html?track=track-chem) | Shows the ADAPT-VQE convergence and ansatz-building process interactively — helps students understand how the variational loop selects operators before working through the code |
+| [Quantum Fourier Transform](https://nvidia.github.io/cuda-q-academic/interactive_widgets/qft.html) | [QIS Foundational Algorithms](https://nvidia.github.io/cuda-q-academic/learningpath.html?track=track-qis) | Step-through QFT circuit visualization — useful as a lecture companion before students implement QFT in code |
+
+</details>
