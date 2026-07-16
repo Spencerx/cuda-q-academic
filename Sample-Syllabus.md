@@ -38,21 +38,19 @@ these topics is in the linked directory](https://github.com/NVIDIA/cuda-q-academ
 
   
 3. Quantum algorithms and applications<br>
-  a. [Quantum teleportation](https://nvidia.github.io/cuda-quantum/latest/applications/python/quantum_teleportation.html)<br>
-  b. [Deutsch's Algorithm](https://nvidia.github.io/cuda-quantum/latest/applications/python/deutschs_algorithm.html)<br>
-  c. [Bernstein-Vazirani](https://nvidia.github.io/cuda-quantum/latest/applications/python/bernstein_vazirani.html)<br>
+  a. [Quantum teleportation](https://github.com/NVIDIA/cuda-q-academic/blob/main/qis-examples/quantum_teleportation.ipynb)<br>
+  b. [Deutsch's Algorithm](https://github.com/NVIDIA/cuda-q-academic/blob/main/qis-examples/deutsch_algorithm.ipynb)<br>
+  c. [Bernstein-Vazirani](https://github.com/NVIDIA/cuda-q-academic/blob/main/qis-examples/bernstein_vazirani.ipynb)<br>
   d. [Grover’s](https://github.com/NVIDIA/cuda-q-academic/blob/main/qis-examples/grovers.ipynb)<br>
   e. QPE<br>
-  f. [QFT](https://nvidia.github.io/cuda-quantum/latest/applications/python/quantum_fourier_transform.html)<br>
+  f. [QFT](https://github.com/NVIDIA/cuda-q-academic/blob/main/qis-examples/quantum_fourier_transform.ipynb)<br>
   g. [Shor’s Factoring Algorithm](https://nvidia.github.io/cuda-quantum/latest/applications/python/shors.html)<br>
 4. Variational hybrid algorithms and applications<br>
-  a. [General structure of a variational hybrid algorithm](https://nvidia.github.io/cuda-quantum/latest/applications/python/cost_minimization.html)<br>
-  b. [Variational quantum eigensolver](https://nvidia.github.io/cuda-quantum/latest/applications/python/vqe.html)<br>
-  c. QAOA for max cut - [code only](https://nvidia.github.io/cuda-quantum/latest/applications/python/qaoa.html) and [course materials with exercises, video
-explanations, etc.](https://github.com/NVIDIA/cuda-q-academic/tree/main/qaoa-for-max-cut)<br>
+  a. General structure of a variational hybrid algorithm<br>
+  b. Variational quantum eigensolver<br>
+  c. [QAOA for max cut course materials with exercises and video explanations](https://github.com/NVIDIA/cuda-q-academic/tree/main/qaoa-for-max-cut)<br>
   d. [QAOA for portfolio optimization](https://github.com/NVIDIA/cuda-q-academic/blob/main/quantum-applications-to-finance/03_qchop.ipynb)
-  e. Hybrid neural networks [basic code](https://nvidia.github.io/cuda-quantum/latest/applications/python/hybrid_qnns.html)
-and application [blog on solar energy application](https://developer.nvidia.com/blog/accelerating-quantum-algorithms-for-solar-energy-prediction-with-nvidia-cuda-q-and-nvidia-cudnn/?ncid=so-link-818523&linkId=100000301600419)<br>
+  e. Hybrid neural networks, including an application [blog on solar energy](https://developer.nvidia.com/blog/accelerating-quantum-algorithms-for-solar-energy-prediction-with-nvidia-cuda-q-and-nvidia-cudnn/?ncid=so-link-818523&linkId=100000301600419)<br>
 6. Quantum Computation<br>
   a. Classical Simulation of Quantum Algorithms<br>
   b. Executing code on Quantum Computers<br>
@@ -64,6 +62,6 @@ and application [blog on solar energy application](https://developer.nvidia.com/
 7. Further topics in Applications and Algorithm Design<br>
   a. Circuit cutting ([introduction to circuit cutting through QAOA max cut example](https://github.com/NVIDIA/cuda-q-academic/tree/main/qaoa-for-max-cut))<br>
   b. GPT-QE [blog](https://developer.nvidia.com/blog/advancing-quantum-algorithm-design-with-gpt/?ncid=so-link-401079&linkId=100000294214594)<br>
-  c. Divisive clustering [code](https://nvidia.github.io/cuda-quantum/latest/applications/python/divisive_clustering_coresets.html) and [blog](https://developer.nvidia.com/blog/cuda-q-enabled-resource-reduction-for-quantum-clustering-algorithms/)<br>
+  c. Divisive clustering [blog](https://developer.nvidia.com/blog/cuda-q-enabled-resource-reduction-for-quantum-clustering-algorithms/)<br>
   d. Quantum annealing ([applied to portofolio optimization](https://github.com/NVIDIA/cuda-q-academic/blob/main/quantum-applications-to-finance/03_qchop.ipynb))
   e. [Infleqtion's QChop alogrithm](https://github.com/NVIDIA/cuda-q-academic/blob/main/quantum-applications-to-finance/03_qchop.ipynb)
