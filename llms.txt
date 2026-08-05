@@ -5,7 +5,7 @@ Use `curriculum.json` as the source of truth for all content discovery in this r
 What `curriculum.json` contains
 
 - `metadata`: scope, update date, and the policy for lesson and widget metadata.
-- `track_order`: the canonical order of the ten CUDA-Q Academic learning paths.
+- `track_order`: the canonical order of CUDA-Q Academic learning paths and instructor resources; use the track IDs exactly as recorded, including `quantum-machine-learning-and-data-analysis`.
 - `tracks[track_id]`: the human title, live learning-path URL, difficulty range, short track summary, and ordered `lesson_ids` for that track.
 - `lessons[lesson_id]`: the canonical lesson record with `title`, `primary_track_id`, `track_ids`, `source_kind`, `repo_path`, `link`, `difficulty`, `prerequisites`, `keywords`, `summary`, and `metadata_source`.
 - `widget_gallery_order`: the canonical order of widgets in the live Visualization Gallery.

@@ -50,6 +50,7 @@ The repository is organized into the learning path modules below. For machine-re
 | Chemistry Simulations | [chemistry-simulations/](chemistry-simulations/) | VQE, ADAPT-VQE, QM/MM, Krylov methods, and more.
 | Quantum Applications for Finance | [quantum-applications-to-finance/](quantum-applications-to-finance/) | Quantum walks, portfolio optimization, QChop |
 | QAOA for Max Cut | [qaoa-for-max-cut/](qaoa-for-max-cut/) | Divide-and-conquer QAOA with circuit cutting |
+| Quantum Machine Learning and Data Analysis | [quantum-machine-learning-and-data-analysis/](quantum-machine-learning-and-data-analysis/) | Quantum and hybrid approaches to machine learning and data-analysis workflows |
 | AI for Quantum | [ai-for-quantum/](ai-for-quantum/) | Using AI models to enable quantum computing |
 | Dynamics 101 | [dynamics101/](dynamics101/) | GPU-accelerated Schrödinger and Lindblad time evolution |
 | Hybrid Workflows | [hybrid-workflows/](hybrid-workflows/) | Hybrid classical–quantum workflow examples |

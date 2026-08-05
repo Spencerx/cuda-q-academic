@@ -5,7 +5,7 @@ Instructions for AI coding agents (Claude Code, Copilot, Cursor, Codex, etc.) wo
 
 ## Repository purpose
 
-CUDA-Q Academic is a collection of Jupyter notebooks that teach quantum computing with [CUDA-Q](https://developer.nvidia.com/cuda-q). It is organized as ten self-contained lesson modules, each of which lives in a top-level folder. Human-facing overview: [README.md](README.md). Hosted curriculum and launch page: https://nvidia.github.io/cuda-q-academic/learningpath.html.
+CUDA-Q Academic is a collection of Jupyter notebooks that teach quantum computing with [CUDA-Q](https://developer.nvidia.com/cuda-q). It is organized as eleven self-contained lesson modules, each of which lives in a top-level folder. Human-facing overview: [README.md](README.md). Hosted curriculum and launch page: https://nvidia.github.io/cuda-q-academic/learningpath.html.
 
 The authoritative machine-readable content catalog in this repo is [curriculum.json](curriculum.json). It is the source of truth for lesson discovery, track membership, prerequisites, difficulty, keywords, summaries, and the live visualization-gallery widget inventory.
 
@@ -107,6 +107,7 @@ cuda-q-academic/
 ├── chemistry-simulations/        # VQE, ADAPT-VQE, QM/MM, Krylov
 ├── quantum-applications-to-finance/
 ├── qaoa-for-max-cut/             # QAOA for Max Cut
+├── quantum-machine-learning-and-data-analysis/ # Quantum machine learning and data analysis
 ├── ai-for-quantum/               # AI for Quantum
 ├── dynamics101/                  # GPU-accelerated quantum dynamics
 ├── hybrid-workflows/             # Hybrid classical–quantum workflows
