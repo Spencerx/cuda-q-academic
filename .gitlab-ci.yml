@@ -150,7 +150,7 @@ test:notebooks:
     paths:
       - "quick-start-to-quantum/solutions/*.ipynb"
       - "qis-examples/solutions/*.ipynb"
-      - #"chemistry-simulations/solutions/*.ipynb"
+      # - "chemistry-simulations/solutions/*.ipynb"
       - "hybrid-workflows/solutions/*.ipynb"
       - "qaoa-for-max-cut/*Solution*.ipynb"
       - "qec101/Solutions/*.ipynb"
