@@ -6,6 +6,8 @@
 
 → Sample plots: [QCalEval dataset on Hugging Face](https://huggingface.co/datasets/nvidia/QCalEval)
 
+→ Visualization: [Qubit Spectroscopy (Intro)](https://nvidia.github.io/cuda-q-academic/interactive_widgets/qubit-spectroscopy-intro.html) · [Calibration Visualization Tools](https://nvidia.github.io/cuda-q-academic/visualization-gallery.html) *(more coming Aug 10)*
+
 ---
 
 ## What students can do
@@ -33,6 +35,16 @@ A few ways to weave the playground into a course:
 
 The playground requires no environment setup, so it slots into a single lecture, a lab section, or a homework prompt without any deployment overhead.
 
+---
+
+## Visualization tools
+
+**Available now:** [Qubit Spectroscopy (Intro)](https://nvidia.github.io/cuda-q-academic/interactive_widgets/qubit-spectroscopy-intro.html) — an interactive explorer for finding the qubit transition frequency ω₀₁ by sweeping drive frequency (low power → raised power until a clean peak appears). Linked from the [CUDA-Q Visualization Gallery](https://nvidia.github.io/cuda-q-academic/visualization-gallery.html) Calibration section and the Calibration learning-path card.
+
+**Coming Aug 10:** additional Calibration Visualization Tools for conceptual understanding of other calibration experiments, plus guided exercises with the [Ising Calibration NIM playground](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b) using sample data from the [QCalEval dataset](https://huggingface.co/datasets/nvidia/QCalEval).
+
+---
+
 ## Notebooks
 
-Hands-on tutorial notebooks for the Calibration track are in development. They will walk through using the Ising Calibration NIM end-to-end alongside CUDA-Q simulated calibration experiments. Today the folder contains a single `00_StartHere.ipynb` landing notebook that points back to this README.
+Hands-on tutorial notebooks for the Calibration track are in development. They will walk through using the Ising Calibration NIM end-to-end alongside CUDA-Q simulated calibration experiments, and will incorporate the visualization tools and playground exercises. Today the folder contains a single `00_StartHere.ipynb` landing notebook that points back to this README.
