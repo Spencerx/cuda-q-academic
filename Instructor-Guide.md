@@ -41,10 +41,11 @@ The builder shows all available modules. Select any subset — a single module f
 | Chemistry Simulations | Intermediate–Advanced | VQE, ADAPT-VQE, QPE, Krylov methods, QM/MM workflows |
 | Applications to Finance | Intermediate–Advanced | Quantum walks, portfolio optimization, QAOA, Q-CHOP |
 | QAOA for Max Cut (Circuit Cutting) | Intermediate | QAOA with divide-and-conquer and recursive circuit-cutting strategies |
+| Quantum Machine Learning and Data Analysis | Intermediate | Quantum and hybrid approaches to machine learning and data-analysis workflows |
 | AI for Quantum | Intermediate | AI models for unitary compilation, error correction, and eigensolvers |
 | Dynamics 101 | Intermediate | Jaynes-Cummings dynamics and time-dependent Hamiltonians |
 | Hybrid Workflows | Intermediate | Cross-cutting hybrid classical-quantum workflows |
-| Calibration (preview) | Intermediate | Classroom use of NVIDIA's Ising Calibration NIM — an open vision-language model for analyzing quantum hardware calibration plots; tutorial notebooks coming soon |
+| Calibration (preview) | Intermediate | Classroom use of NVIDIA's Ising Calibration NIM — an open vision-language model for analyzing quantum hardware calibration plots; visualization tools and tutorial notebooks coming soon |
 | Quantum AI Project Template | Intermediate–Advanced | Role-based group project structure with AI agent configurations |
 
 ### 2. Pick the notebooks
