@@ -1,50 +1,61 @@
-# Calibration
+# Calibration - Instructor Resource
 
-**Instructor resource.** A classroom-ready introduction to [NVIDIA's Ising Calibration NIM](https://www.nvidia.com/en-us/solutions/quantum-computing/ising/) — an open vision-language model purpose-built for analyzing quantum hardware calibration plots, benchmarked on superconducting qubits and neutral atoms. No setup, no API key; the playground runs in the browser.
+Links and classroom tools for calibration visualizations and [NVIDIA Ising Calibration](https://www.nvidia.com/en-us/solutions/quantum-computing/ising/) plot analysis. Numbered student notebooks will be added here later.
 
-→ Launch the [Ising Calibration NIM playground](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b)
+## Contents
 
-→ Sample plots: [QCalEval dataset on Hugging Face](https://huggingface.co/datasets/nvidia/QCalEval)
 
-→ Visualization: [Qubit Spectroscopy (Intro)](https://nvidia.github.io/cuda-q-academic/interactive_widgets/qubit-spectroscopy-intro.html) · [Calibration Visualization Tools](https://nvidia.github.io/cuda-q-academic/visualization-gallery.html) *(more coming Aug 10)*
+| File                                               | Role                                                                                                             |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| [Instructor_Guide.ipynb](Instructor_Guide.ipynb) | How to use the visualizations and Ising in class; includes a Colab/Jupyter upload-and-run cell for the Ising API |
+| `README.md`                                        | This inventory                                                                                                   |
 
----
 
-## What students can do
+## Quick links
 
-Upload any calibration experiment plot — from your own lab, a simulation run, or the QCalEval dataset — and ask the model to analyze it. The model returns structured responses across six question types:
 
-* Technical description of the experiment
-* Experimental conclusion
-* Experimental significance
-* Fit quality assessment
-* Parameter extraction
-* Experiment success classification
+| Resource                            | Link                                                                                                              |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Visualization Gallery (Calibration) | [Open →](https://nvidia.github.io/cuda-q-academic/visualization-gallery.html)                                     |
+| Learning path card                  | [Calibration track](https://nvidia.github.io/cuda-q-academic/learningpath.html?track=track-calibration)           |
+| Ising NIM playground (no API key)   | [build.nvidia.com](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b)                                   |
+| Environment & API-key setup         | [ising_api_key_setup.html](https://nvidia.github.io/cuda-q-academic/interactive_widgets/ising_api_key_setup.html) |
+| Sample plots                        | [QCalEval on Hugging Face](https://huggingface.co/datasets/nvidia/QCalEval)                                       |
 
-Students can ask for all six at once or target specific ones.
 
----
 
-## Using this in class
-
-A few ways to weave the playground into a course:
-
-* **First-pass plot reader.** A starting point for interpreting an unfamiliar Rabi, Ramsey, T1, T2, or randomized benchmarking trace.
-* **Second opinion.** A check on a student's own analysis of their lab data.
-* **Reasoning exemplar.** A way to expose what structured calibration reasoning looks like across different experiment types — useful even when students disagree with the model.
-
-The playground requires no environment setup, so it slots into a single lecture, a lab section, or a homework prompt without any deployment overhead.
-
----
 
 ## Visualization tools
 
-**Available now:** [Qubit Spectroscopy (Intro)](https://nvidia.github.io/cuda-q-academic/interactive_widgets/qubit-spectroscopy-intro.html) — an interactive explorer for finding the qubit transition frequency ω₀₁ by sweeping drive frequency (low power → raised power until a clean peak appears). Linked from the [CUDA-Q Visualization Gallery](https://nvidia.github.io/cuda-q-academic/visualization-gallery.html) Calibration section and the Calibration learning-path card.
+Widgets follow a typical superconducting-qubit bring-up order. Live items also appear in the [Visualization Gallery](https://nvidia.github.io/cuda-q-academic/visualization-gallery.html).
 
-**Coming Aug 10:** additional Calibration Visualization Tools for conceptual understanding of other calibration experiments, plus guided exercises with the [Ising Calibration NIM playground](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b) using sample data from the [QCalEval dataset](https://huggingface.co/datasets/nvidia/QCalEval).
 
----
+| #   | Experiment                  | Status        | Visualization                                                                                        |
+| --- | --------------------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
+| 0   | Time of Flight              | *Coming soon* | —                                                                                                    |
+| 1   | Resonator Spectroscopy      | Live          | [Open →](https://nvidia.github.io/cuda-q-academic/interactive_widgets/resonator-spectroscopy.html)   |
+| 2   | Resonator Punch Out         | Live          | [Open →](https://nvidia.github.io/cuda-q-academic/interactive_widgets/resonator-punch-out.html)      |
+| 3   | Resonator Flux Spectroscopy | *Coming soon* | —                                                                                                    |
+| 4   | Qubit Spectroscopy          | Live          | [Open →](https://nvidia.github.io/cuda-q-academic/interactive_widgets/qubit-spectroscopy-intro.html) |
+| 5   | Amplitude Rabi              | Live          | [Open →](https://nvidia.github.io/cuda-q-academic/interactive_widgets/rabi-oscillations.html)        |
+| 6   | T₁ (Energy Relaxation)      | *Coming soon* | —                                                                                                    |
+| 7   | Ramsey                      | *Coming soon* | —                                                                                                    |
+| 8   | Hahn Echo                   | *Coming soon* | —                                                                                                    |
+| 9   | Single-Shot Readout         | *Coming soon* | —                                                                                                    |
+| 10  | Randomized Benchmarking     | *Coming soon* | —                                                                                                    |
+| 11  | DRAG Pulse Calibration      | Live          | [Open →](https://nvidia.github.io/cuda-q-academic/interactive_widgets/drag-pulse-calibration.html)   |
+| 12  | Error Amplification         | *Coming soon* | —                                                                                                    |
 
-## Notebooks
 
-Hands-on tutorial notebooks for the Calibration track are in development. They will walk through using the Ising Calibration NIM end-to-end alongside CUDA-Q simulated calibration experiments, and will incorporate the visualization tools and playground exercises. Today the folder contains a single `00_StartHere.ipynb` landing notebook that points back to this README.
+
+
+## References
+
+1. P. Krantz et al., *A Quantum Engineer's Guide to Superconducting Qubits*, Applied Physics Reviews **6**, 021318 (2019). [arXiv:1904.06560](https://arxiv.org/abs/1904.06560)
+2. A. M. Souza et al., *A Tutorial for Characterizing Transmon Qubits*, [arXiv:2606.03815](https://arxiv.org/abs/2606.03815)
+3. Qblox, *Hands-on Qubit Calibration* workshop slides — public link TBD
+4. [NVIDIA Ising](https://developer.nvidia.com/ising) · [NIM playground](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b) · [Solutions overview](https://www.nvidia.com/en-us/solutions/quantum-computing/ising/)
+5. [Ising launch blog](https://developer.nvidia.com/blog/nvidia-ising-introduces-ai-powered-workflows-to-build-fault-tolerant-quantum-systems/) · [Ising Calibration 1.5 / ICL blog](https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/)
+6. [Environment and API-key setup](https://nvidia.github.io/cuda-q-academic/interactive_widgets/ising_api_key_setup.html)
+7. S. Cao et al., *QCalEval*, [arXiv:2604.25884](https://arxiv.org/abs/2604.25884); dataset: [nvidia/QCalEval](https://huggingface.co/datasets/nvidia/QCalEval)
+
