@@ -5,10 +5,28 @@ Resources for exploring superconducting-qubit calibration through interactive vi
 ## Contents
 
 
-| File                                                                       | Role                                                                                                                         |
-| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [Calibration_Resources_Guide.ipynb](Calibration_Resources_Guide.ipynb)     | Guided path through the visualizations, sample plots, and Ising; includes a Colab/Jupyter upload-and-run cell for the Ising API |
-| `README.md`                                                                | Resource inventory and references                                                                                            |
+| File                                                                   | Role                                                                                                                               |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [Calibration_Resources_Guide.ipynb](Calibration_Resources_Guide.ipynb) | Orientation path through the visualizations, sample plots, and Ising options                                                       |
+| [ising_calibration_intro.ipynb](ising_calibration_intro.ipynb)         | Hands-on Ising API notebook: zero-shot analysis and in-context learning comparison                                                 |
+| `images/`                                                              | Loose sample PNGs used by widgets and references                                                                                   |
+| [images/calibration_images.zip](images/calibration_images.zip)         | Plot pack for the intro notebook — extract to `calibration_images/` beside the notebook                                            |
+| `README.md`                                                            | This inventory                                                                                                                     |
+
+
+## Before you run the intro notebook
+
+1. Install the API client: `pip install openai`
+2. Create an NVIDIA API key at [NVIDIA Build](https://build.nvidia.com/) and set `NVIDIA_API_KEY` in the environment before launching Jupyter
+3. Extract the plot pack so the folder sits beside the notebook:
+
+```bash
+cd calibration
+unzip images/calibration_images.zip
+# creates ./calibration_images/ next to ising_calibration_intro.ipynb
+```
+
+4. If needed, follow the [environment and API-key setup guide](https://nvidia.github.io/cuda-q-academic/interactive_widgets/ising_api_key_setup.html)
 
 
 ## Quick links
@@ -48,7 +66,6 @@ Widgets follow a typical superconducting-qubit bring-up order. Live items also a
 
 
 
-
 ## References
 
 1. P. Krantz et al., *A Quantum Engineer's Guide to Superconducting Qubits*, Applied Physics Reviews **6**, 021318 (2019). [arXiv:1904.06560](https://arxiv.org/abs/1904.06560)
@@ -58,4 +75,3 @@ Widgets follow a typical superconducting-qubit bring-up order. Live items also a
 5. [Ising launch blog](https://developer.nvidia.com/blog/nvidia-ising-introduces-ai-powered-workflows-to-build-fault-tolerant-quantum-systems/) · [Ising Calibration 1.5 / ICL blog](https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/)
 6. [Environment and API-key setup](https://nvidia.github.io/cuda-q-academic/interactive_widgets/ising_api_key_setup.html)
 7. S. Cao et al., *QCalEval*, [arXiv:2604.25884](https://arxiv.org/abs/2604.25884); dataset: [nvidia/QCalEval](https://huggingface.co/datasets/nvidia/QCalEval)
-

@@ -111,7 +111,7 @@ cuda-q-academic/
 ├── ai-for-quantum/               # AI for Quantum
 ├── dynamics101/                  # GPU-accelerated quantum dynamics
 ├── hybrid-workflows/             # Hybrid classical–quantum workflows
-├── calibration/                  # General calibration resources: interactive visualizations, sample plots, and Ising guide
+├── calibration/                  # Calibration resources guide + Ising Calibration intro notebook + plot images
 ├── quantum-ai-project-template/  # Instructor resource: role-based group project template
 ├── curriculum.json               # canonical lesson/widget catalog for agents
 ├── Guide-to-cuda-q-backends.ipynb
