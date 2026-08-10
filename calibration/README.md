@@ -1,14 +1,14 @@
-# Calibration - Instructor Resource
+# Calibration Resources
 
-Links and classroom tools for calibration visualizations and [NVIDIA Ising Calibration](https://www.nvidia.com/en-us/solutions/quantum-computing/ising/) plot analysis. Numbered student notebooks will be added here later.
+Resources for exploring superconducting-qubit calibration through interactive visualizations, sample plots, and [NVIDIA Ising Calibration](https://www.nvidia.com/en-us/solutions/quantum-computing/ising/) plot analysis. Hardware access and prior laboratory experience are not required.
 
 ## Contents
 
 
-| File                                               | Role                                                                                                             |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [Instructor_Guide.ipynb](Instructor_Guide.ipynb) | How to use the visualizations and Ising in class; includes a Colab/Jupyter upload-and-run cell for the Ising API |
-| `README.md`                                        | This inventory                                                                                                   |
+| File                                                                       | Role                                                                                                                         |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| [Calibration_Resources_Guide.ipynb](Calibration_Resources_Guide.ipynb)     | Guided path through the visualizations, sample plots, and Ising; includes a Colab/Jupyter upload-and-run cell for the Ising API |
+| `README.md`                                                                | Resource inventory and references                                                                                            |
 
 
 ## Quick links

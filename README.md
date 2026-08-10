@@ -57,12 +57,12 @@ The repository is organized into the learning path modules below. For machine-re
 
 Each module folder contains student notebooks, a module-local `README.md`, a `solutions/` subfolder, and an `images/` subfolder with figures.
 
-### Instructor Resources
+### Additional Resources
 
 | Resource | Folder | Description |
 |---|---|---|
 | Quantum Computing Group Project | [quantum-ai-project-template/](quantum-ai-project-template/) | Role-based, agentic-AI group project template for deploying a quantum-GPU computing project in a course. See the [Group Project](#quantum-computing-group-project) section below. |
-| Calibration | [calibration/](calibration/) | Instructor resource: live calibration experiment visualizations, [Ising Calibration](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b) playground / API-key setup / notebook upload-and-run, and sample plots from [QCalEval](https://huggingface.co/datasets/nvidia/QCalEval). See [`calibration/Instructor_Guide.ipynb`](calibration/Instructor_Guide.ipynb). Numbered student notebooks coming later. |
+| Calibration | [calibration/](calibration/) | Guided resources for exploring superconducting-qubit calibration: live experiment visualizations, sample plots from [QCalEval](https://huggingface.co/datasets/nvidia/QCalEval), and [Ising Calibration](https://build.nvidia.com/nvidia/ising-calibration-1-35b-a3b) through the browser playground or notebook API. See the [`Calibration Resources Guide`](calibration/Calibration_Resources_Guide.ipynb). |
 
 
 ## Quantum Computing Group Project
