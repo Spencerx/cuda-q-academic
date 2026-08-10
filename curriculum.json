@@ -191,11 +191,12 @@
       "difficulty_range": [
         "intermediate"
       ],
-      "summary": "Resources for exploring superconducting-qubit calibration: interactive experiment visualizations, sample plots, and NVIDIA Ising for structured plot analysis.",
+      "summary": "Resources and a hands-on notebook for superconducting-qubit calibration: interactive visualizations, sample plots, and NVIDIA Ising for zero-shot and in-context plot analysis.",
       "more_lessons_coming_soon": true,
       "more_lessons_coming_soon_label": "More calibration widgets coming soon",
       "lesson_ids": [
-        "calibration-resources-guide"
+        "calibration-resources-guide",
+        "ising-calibration-intro"
       ],
       "featured_widget_ids": [
         "ising-api-key-setup",
@@ -1396,6 +1397,39 @@
         "randomized-benchmarking",
         "drag-pulse-calibration",
         "error-amplification"
+      ]
+    },
+    "ising-calibration-intro": {
+      "title": "Ising Calibration Introductory Demo",
+      "primary_track_id": "calibration",
+      "track_ids": [
+        "calibration"
+      ],
+      "source_kind": "local_notebook",
+      "repo_path": "calibration/ising_calibration_intro.ipynb",
+      "link": "https://github.com/NVIDIA/cuda-q-academic/blob/main/calibration/ising_calibration_intro.ipynb",
+      "is_new": true,
+      "added_date": "2026-08-10",
+      "difficulty": "intermediate",
+      "prerequisites": [
+        "Python and Jupyter familiarity",
+        "NVIDIA API key in NVIDIA_API_KEY",
+        "basic familiarity with superconducting-qubit calibration experiments",
+        "extracted calibration_images folder beside the notebook"
+      ],
+      "keywords": [
+        "Ising Calibration",
+        "zero-shot",
+        "in-context learning",
+        "calibration plots",
+        "vision-language model",
+        "API key",
+        "Ramsey"
+      ],
+      "summary": "Hands-on intro to NVIDIA Ising Calibration: connect to the hosted API, structure zero-shot prompts, analyze one or more plots, then compare zero-shot and ICL on a Ramsey example with a synthetic calibration error.",
+      "metadata_source": "calibration/ising_calibration_intro.ipynb",
+      "widget_ids": [
+        "ising-api-key-setup"
       ]
     }
   },
