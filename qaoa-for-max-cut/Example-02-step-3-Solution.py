@@ -18,7 +18,11 @@ import networkx as nx
 from networkx import algorithms
 from networkx.algorithms import community
 import cudaq
-import cudaq_solvers as solvers
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from utilities.vqe import vqe
 from cudaq import spin
 from cudaq.qis import *
 import numpy as np
@@ -261,8 +265,8 @@ def find_optimal_parameters(G, layer_count, seed):
     initial_parameters = np.random.uniform(-np.pi, np.pi,
                                            parameter_count).tolist()
 
-    # Pass the kernel, spin operator, and optimizer to `solvers.vqe`.
-    optimal_expectation, optimal_parameters, _ = solvers.vqe(
+    # Pass the kernel, spin operator, and optimizer to `vqe`.
+    optimal_expectation, optimal_parameters, _ = vqe(
         lambda thetas: kernel_qaoa(qubit_count, layer_count, qubit_src, qubit_tgt, thetas),
         hamiltonian_max_cut(qubit_src, qubit_tgt),
         initial_parameters,
@@ -309,7 +313,7 @@ def qaoa_for_graph(G, layer_count, shots, seed):
 
     # Print the optimized parameters
     print("Optimal parameters = ", optimal_parameters)
-    
+
     # Sample the circuit
     counts = cudaq.sample(kernel_qaoa, qubit_count, layer_count, qubit_src, qubit_tgt, optimal_parameters, shots_count=shots)
     print('most_probable outcome = ',counts.most_probable())
@@ -543,8 +547,8 @@ else:
         merger_edge_src.append(merger_nodes.index(u))
         merger_edge_tgt.append(merger_nodes.index(v))
 
-    # Pass the kernel, spin operator, and optimizer to `solvers.vqe`.
-    optimal_expectation, optimal_parameters, _ = solvers.vqe(
+    # Pass the kernel, spin operator, and optimizer to `vqe`.
+    optimal_expectation, optimal_parameters, _ = vqe(
         lambda thetas: kernel_qaoa(qubit_count, layer_count, merger_edge_src, merger_edge_tgt, thetas),
         mHamiltonian(mergerGraph),
         initial_parameters_merger,
@@ -558,6 +562,7 @@ else:
 
     # Sample the circuit using the optimized parameters
     sample_number=15000
+    cudaq.set_random_seed(101)
     counts = cudaq.sample(kernel_qaoa, qubit_count, layer_count, merger_edge_src, merger_edge_tgt, optimal_parameters, shots_count=5000)
     print(f"most_probable = {counts.most_probable()}")
 

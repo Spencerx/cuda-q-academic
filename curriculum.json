@@ -95,7 +95,6 @@
       ],
       "summary": "Quantum chemistry lessons covering VQE, ADAPT-VQE, QPE, Krylov methods, and QM/MM workflows.",
       "lesson_ids": [
-        "vqe-and-gqe",
         "adapt-vqe",
         "quantum-phase-estimation",
         "krylov-subspace-diagonalization",
@@ -150,9 +149,8 @@
       "difficulty_range": [
         "intermediate"
       ],
-      "summary": "Uses AI models to tackle bottlenecks in unitary compilation, error correction, and eigensolver workflows.",
+      "summary": "Uses AI models to tackle bottlenecks in unitary compilation, error correction, and QAOA workflows.",
       "lesson_ids": [
-        "vqe-and-gqe",
         "compiling-unitaries-with-diffusion-models",
         "qec-04-ai-decoders",
         "qaoa-max-cut-and-gpt-qaoa-workshop"
@@ -176,12 +174,11 @@
       "difficulty_range": [
         "intermediate"
       ],
-      "summary": "Cross-cutting hybrid classical-quantum workflows spanning LABS optimization, QAOA, quantum walks, and VQE/GQE.",
+      "summary": "Cross-cutting hybrid classical-quantum workflows spanning LABS optimization, QAOA, and quantum walks.",
       "lesson_ids": [
         "labs-optimization",
         "max-cut-with-qaoa",
         "quantum-walks-for-finance-part-1",
-        "vqe-and-gqe",
         "qaoa-max-cut-and-gpt-qaoa-workshop"
       ]
     },
@@ -834,37 +831,6 @@
       "widget_ids": [
         "steane-code-noise-model-explorer"
       ]
-    },
-    "vqe-and-gqe": {
-      "title": "VQE and GQE",
-      "primary_track_id": "chemistry-simulations",
-      "track_ids": [
-        "chemistry-simulations",
-        "ai-for-quantum",
-        "hybrid-workflows"
-      ],
-      "source_kind": "local_notebook",
-      "repo_path": "chemistry-simulations/vqe_and_gqe.ipynb",
-      "link": "https://github.com/NVIDIA/cuda-q-academic/blob/main/chemistry-simulations/vqe_and_gqe.ipynb",
-      "is_new": true,
-      "added_date": "2026-01-29",
-      "difficulty": "intermediate",
-      "prerequisites": [
-        "Python and Jupyter familiarity",
-        "basic quantum computing concepts",
-        "variational-algorithm intuition",
-        "basic quantum chemistry terminology is helpful"
-      ],
-      "keywords": [
-        "VQE",
-        "GQE",
-        "ground states",
-        "ansatz",
-        "barren plateaus"
-      ],
-      "summary": "Introduces variational and generative quantum eigensolvers for molecular ground-state preparation.",
-      "metadata_source": "notebook intro cell + llms.txt",
-      "widget_ids": []
     },
     "adapt-vqe": {
       "title": "ADAPT-VQE",
