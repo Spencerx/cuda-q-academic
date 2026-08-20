@@ -16,11 +16,15 @@ import networkx as nx
 from networkx.algorithms import community
 import cudaq
 from cudaq import spin
-import cudaq_solvers as solvers
 import numpy as np
 from mpi4py import MPI
+from pathlib import Path
+import sys
 from typing import List
 
+# Make the repository-local VQE helper importable from this lesson folder.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from utilities.vqe import vqe
 
 cudaq.set_target("nvidia")
 target = cudaq.get_target()
@@ -119,17 +123,60 @@ def subgraphpartition(G, n, name, globalGraph):
     return graph_dictionary
 
 
-# ─── Max-cut QAOA via solvers ───────────────────────────────────────
+# ─── Max-cut QAOA ───────────────────────────────────────────────────
+
+def maxcut_hamiltonian(graph):
+    """Return the weighted Max-Cut Hamiltonian for a 0-indexed graph."""
+    hamiltonian = 0.0
+    for source, target, data in graph.edges(data=True):
+        weight = float(data.get('weight', 1.0))
+        hamiltonian += 0.5 * weight * (
+            spin.z(source) * spin.z(target) -
+            spin.i(source) * spin.i(target))
+    return hamiltonian
+
+
+@cudaq.kernel
+def qaoa_kernel(qubit_count: int, layer_count: int,
+                hamiltonian_words: list[cudaq.pauli_word],
+                hamiltonian_coefficients: list[float],
+                parameters: list[float]):
+    qubits = cudaq.qvector(qubit_count)
+    h(qubits)
+    for layer in range(layer_count):
+        gamma = parameters[2 * layer]
+        beta = parameters[2 * layer + 1]
+        for term in range(len(hamiltonian_words)):
+            exp_pauli(-gamma * hamiltonian_coefficients[term],
+                      qubits, hamiltonian_words[term])
+        for qubit in range(qubit_count):
+            rx(2.0 * beta, qubits[qubit])
+
+
+def optimize_and_sample(hamiltonian, qubit_count, layer_count,
+                        initial_parameters, shots):
+    """Optimize and sample the explicit CUDA-Q QAOA kernel."""
+    words = [term.get_pauli_word(qubit_count) for term in hamiltonian]
+    coefficients = [float(term.evaluate_coefficient().real)
+                    for term in hamiltonian]
+    optimal_value, optimal_parameters, _ = vqe(
+        lambda parameters: qaoa_kernel(
+            qubit_count, layer_count, words, coefficients, parameters),
+        hamiltonian, initial_parameters, optimizer='cobyla')
+    counts = cudaq.sample(
+        qaoa_kernel, qubit_count, layer_count, words, coefficients,
+        optimal_parameters, shots_count=shots)
+    return optimal_value, optimal_parameters, counts
 
 def qaoa_for_graph(G, layer_count, shots, seed):
-    """Find an approximate max cut of G using ``solvers.qaoa()``.
+    """Find an approximate max cut of G using an explicit CUDA-Q kernel.
 
     Parameters
     ----------
     G : networkX.Graph
     layer_count : int
     shots : int
-        (Kept for API compatibility; solvers.qaoa handles sampling internally.)
+        Number of samples from the optimized circuit.
     seed : int
 
     Returns
@@ -146,16 +193,17 @@ def qaoa_for_graph(G, layer_count, shots, seed):
 
     # Remap to 0-indexed nodes so qubit indices match
     G_mapped = nx.convert_node_labels_to_integers(G, ordering='sorted')
-    hamiltonian = solvers.get_maxcut_hamiltonian(G_mapped)
-    parameter_count = solvers.get_num_qaoa_parameters(hamiltonian, layer_count)
+    hamiltonian = maxcut_hamiltonian(G_mapped)
+    parameter_count = 2 * layer_count
 
     np.random.seed(seed)
     cudaq.set_random_seed(seed)
     initial_parameters = np.random.uniform(
         -np.pi, np.pi, parameter_count).tolist()
 
-    optimal_value, optimal_parameters, sample_result = solvers.qaoa(
-        hamiltonian, layer_count, initial_parameters)
+    optimal_value, optimal_parameters, sample_result = optimize_and_sample(
+        hamiltonian, G_mapped.number_of_nodes(), layer_count,
+        initial_parameters, shots)
 
     print("Optimal value =", optimal_value)
     print("most_probable outcome =", sample_result.most_probable())
@@ -236,7 +284,7 @@ def merger_hamiltonian(merger_edge_src, merger_edge_tgt, penalty):
 
 
 def merging(G, graph_dictionary, merger_graph):
-    """Use ``solvers.qaoa()`` on the merger graph to determine which
+    """Use QAOA on the merger graph to determine which
     subgraphs should have their colours flipped.
 
     Parameters
@@ -268,15 +316,16 @@ def merging(G, graph_dictionary, merger_graph):
 
     H = merger_hamiltonian(merger_edge_src, merger_edge_tgt, penalty)
     layer_count_merger = 3
-    parameter_count = solvers.get_num_qaoa_parameters(H, layer_count_merger)
+    parameter_count = 2 * layer_count_merger
 
     cudaq.set_random_seed(12345)
     np.random.seed(4321)
     initial_parameters = np.random.uniform(
         -np.pi, np.pi, parameter_count).tolist()
 
-    _, _, sample_result = solvers.qaoa(
-        H, layer_count_merger, initial_parameters)
+    _, _, sample_result = optimize_and_sample(
+        H, len(merger_nodes), layer_count_merger,
+        initial_parameters, shots=1000)
 
     return str(sample_result.most_probable())
 

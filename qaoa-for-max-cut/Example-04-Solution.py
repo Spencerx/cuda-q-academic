@@ -17,7 +17,11 @@ import networkx as nx
 from networkx import algorithms
 from networkx.algorithms import community
 import cudaq
-import cudaq_solvers as solvers
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from utilities.vqe import vqe
 from cudaq import spin
 from cudaq.qis import *
 import numpy as np
@@ -177,8 +181,8 @@ def find_optimal_parameters(G, layer_count, seed):
     initial_parameters = np.random.uniform(-np.pi, np.pi,
                                            parameter_count).tolist()
 
-    # Pass the kernel, spin operator, and optimizer to `solvers.vqe`.
-    optimal_expectation, optimal_parameters, _ = solvers.vqe(
+    # Pass the kernel, spin operator, and optimizer to `vqe`.
+    optimal_expectation, optimal_parameters, _ = vqe(
         lambda thetas: kernel_qaoa(qubit_count, layer_count, qubit_src, qubit_tgt, thetas),
         hamiltonian_max_cut(qubit_src, qubit_tgt, weights),
         initial_parameters,
@@ -509,8 +513,8 @@ def merging(G, graph_dictionary, merger_graph):
         np.random.seed(merger_seed)
         initial_parameters_merger = np.random.uniform(-np.pi, np.pi,
                                                       parameter_count_merger).tolist()
-        # Pass the kernel, spin operator, and optimizer to `solvers.vqe`.
-        optimal_expectation, optimal_parameters, _ = solvers.vqe(
+        # Pass the kernel, spin operator, and optimizer to `vqe`.
+        optimal_expectation, optimal_parameters, _ = vqe(
             lambda thetas: kernel_qaoa(qubit_count_merger, layer_count_merger, merger_edge_src, merger_edge_tgt, thetas),
             merger_Hamiltonian,
             initial_parameters_merger,
@@ -522,6 +526,7 @@ def merging(G, graph_dictionary, merger_graph):
         # Sample enough times to distinguish the most_probable outcome for
         # merger graphs with 12 vertices
         sample_number=20000
+        cudaq.set_random_seed(merger_seed)
         counts = cudaq.sample(kernel_qaoa, qubit_count_merger, layer_count_merger, merger_edge_src, merger_edge_tgt, optimal_parameters, shots_count=sample_number)
         mergerResultsString = str(counts.most_probable())
         
